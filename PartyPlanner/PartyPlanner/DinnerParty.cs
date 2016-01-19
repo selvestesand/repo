@@ -6,84 +6,80 @@ using System.Threading.Tasks;
 
 namespace PartyPlanner
 {
-    class DinnerParty
+    class DinnerParty : Party
     {
-        private const int CostOfFoodPerPerson = 25;
+
+        //Set Fancy Deconrations option
+        //private bool fancyDecorations;
+        //public bool FancyDecorations {
+
+        //Set number of people attending the dinner party
+        //private int numberOfPeople;
+        //public int NumberOfPeople {
+        //    set
+        //    {
+        //        numberOfPeople = value;
+        //        CalculateCostOfDecorations(); !!ADD THIS TO Cost PROPERTY!!
+        //    }
+        //}
+
+        //    private get
+        //    {
+        //        return fancyDecorations;
+        //    }
+        //    set
+        //    {
+        //        fancyDecorations = value;
+        //        CalculateCostOfDecorations();
+        //    }
+        //}
+
+        //Calculates the cost of decorations
+        //private decimal CalculateCostOfDecorations()
+        //{
+        //    return fancyDecorations ? (numberOfPeople * FancyDecoPerPerson) + FancyDecoFee : (numberOfPeople * NonFancyDecoPerPerson) + NonFancyDecoFee;
+        //}
+
         private const decimal HealthyBeverage = 5.00M;
         private const decimal HealthyDiscount = .95M;
         private const decimal NonHealthyBeverage = 20.00M;
-        private const decimal FancyDecoPerPerson = 15.00M;
-        private const decimal FancyDecoFee = 50.00M;
-        private const decimal NonFancyDecoPerPerson = 7.50M;
-        private const decimal NonFancyDecoFee = 30.00M;
-
-        private decimal CostOfBeveragesPerPerson;
-        private decimal CostOfDecorations;
-
-
-        //Set number of people attending the dinner party
-        private int numberOfPeople;
-        public int NumberOfPeople {
-            set
-            {
-                numberOfPeople = value;
-                CalculateCostOfDecorations();
-            }
-        }
-
-        //Set Healthy beverage option
-        private bool healthyOption;
-        public bool HealthyOption {
-            set
-            {
-                healthyOption = value;
-                CostOfBeveragesPerPerson = healthyOption ? HealthyBeverage : NonHealthyBeverage;
-            }
-        }
-
-        //Set Fancy Deconrations option
-        private bool fancyDecorations;
-        public bool FancyDecorations {
-
-            private get
-            {
-                return fancyDecorations;
-            }
-            set
-            {
-                fancyDecorations = value;
-                CalculateCostOfDecorations();
-            }
-        }
-
-
-        //Returns the cost of the entire dinner party.
-        public decimal Cost
-        {
-            get
-            {
-                decimal cost = (((CostOfBeveragesPerPerson + CostOfFoodPerPerson) * numberOfPeople) + CostOfDecorations);
-                cost += numberOfPeople > 12 ? 100M : 0M;
-                return healthyOption ? cost * HealthyDiscount : cost; ;
-            }
-        }
-
 
         // DinnerParty constructor 
-        public DinnerParty(int numberOfPeople, bool healtyOption, bool fancyDecorations)
+        public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations)
         {
-            HealthyOption = healtyOption;
+            HealthyOption = healthyOption;
             FancyDecorations = fancyDecorations;
             NumberOfPeople = numberOfPeople;
         }
 
-
-        //Calculates the cost of decorations
-        private void CalculateCostOfDecorations()
+        //Set Healthy beverage option
+        private bool healthyOption;
+        public bool HealthyOption
         {
-            CostOfDecorations = fancyDecorations ? (numberOfPeople * FancyDecoPerPerson) + FancyDecoFee : (numberOfPeople * NonFancyDecoPerPerson) + NonFancyDecoFee;
+            set { healthyOption = value; }
         }
 
+        //Returns the cost of the entire dinner party.
+        public override decimal Cost
+        {
+            get
+            {
+                //Adding base cost
+                decimal totalCost = base.Cost;
+                //Adding cost of beverages
+                totalCost += healthyOption ? HealthyBeverage * NumberOfPeople : NonHealthyBeverage * NumberOfPeople;
+                //Adding potential discount
+                totalCost = healthyOption ? totalCost * HealthyDiscount : totalCost;
+
+                return totalCost;
+            }
+        }
+
+
+        private decimal CalculateCostOfBeveragesPerPerson()
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }
