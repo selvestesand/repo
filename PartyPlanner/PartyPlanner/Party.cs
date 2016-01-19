@@ -8,5 +8,12 @@ namespace PartyPlanner
 {
     class Party
     {
+
+        private int numberOfPeople;
+        public int NumberOfPeople
+        {
+            set { numberOfPeople = value; }
+        }
+
     }
 }
