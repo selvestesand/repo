@@ -7,3 +7,6 @@ c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlan
 c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.GenerateResource.Cache
 c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.exe
 c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.pdb
+C:\Users\Aleksander\Documents\GitHub\repo\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe.config
+C:\Users\Aleksander\Documents\GitHub\repo\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.exe
+C:\Users\Aleksander\Documents\GitHub\repo\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.pdb
