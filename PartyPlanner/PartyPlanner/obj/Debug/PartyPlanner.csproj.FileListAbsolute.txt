@@ -1,0 +1,9 @@
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe.config
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.pdb
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csprojResolveAssemblyReference.cache
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Form1.resources
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Properties.Resources.resources
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.GenerateResource.Cache
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.exe
+c:\users\aleksander\documents\visual studio 2015\Projects\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.pdb
